@@ -1,0 +1,95 @@
+.login {
+    background-image: url('../imagem/flor-tropical.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+}
+  
+.login-form {
+    background-color: #fff;
+    padding: 40px 90px 40px 70px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: auto; 
+    display: flex;
+    flex-direction: column;
+}
+  
+.login-form h2 { 
+    font-weight: 600;
+    color: #66f03c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.form-group {
+    margin-bottom: 20px;
+}
+  
+.form-group label {
+    color: #66f03c;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+  
+.form-group input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #EAE8E8;
+}
+  
+.form-group a {
+    text-decoration: none;
+    color: #666;
+}
+
+.login-form button {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    padding: 10px;
+    border: none;
+    background-color: #66f03c;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.signup-link {
+    font-size: 12px;
+    color: #66f03c;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+  
+.signup-link p {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.signup-link a {
+    color: #134b03;
+    text-decoration: none;
+}
+
+#password {
+    font-size: 12px;
+    text-align: center;
+}
+
+#password a {
+    font-weight: bold;
+    color: #134b03;
+    display: inline-block;
+    text-align: center;
+}
+
+  
