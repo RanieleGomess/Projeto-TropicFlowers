@@ -10,7 +10,7 @@
 }
 
 form {
-    max-width: 600px;
+    width: 600px;
     margin: 0 auto;
     padding: 60px;
     border: 1px solid #ccc;
