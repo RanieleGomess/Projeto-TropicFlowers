@@ -97,6 +97,38 @@ nav.secao {
     display: inline-block;
 }
 
+.image-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(to bottom, black, darkgreen, black);
+    color: white;
+}
+
+button {
+    background-color: white;
+    color: #26720f;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.image {
+    width: 40%;
+    height: 400px;
+}
+
 .secao-content {
     display: none;
     position: absolute;
