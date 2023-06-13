@@ -20,8 +20,14 @@
         </div>
         <div class="account">
             <a href="html/login.html">Entrar</a>
-            <a href="html/cadastrocliente.html">Cadastre-se</a>
+            <a href="html/cadastrocliente.html">Cadastre-se</a> 
+
             <a href="#"><i class="fa fa-shopping-cart"></i></a>
+            <span class="cart-quantity">0</span> 
+            <div class="cart-popup">
+  <h3>Itens do Carrinho</h3>
+  <div class="cart-items"></div>
+</div>        
         </div>
     </header>
 
@@ -83,6 +89,7 @@
                 <h4 class="title-item">Decoração Caminho de mesa</h4>
                 <div class="price"><span class="actual-price">R$ 120,00</span></div>
             </fieldset>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
         </form>
     </li>
     <li class="slide">
@@ -92,6 +99,7 @@
                 <h4 class="title-item">Decoração de Casamento</h4>
                 <div class="price"><span class="actual-price">R$ 329,90</span></div>
             </fieldset>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
         </form>
     </li>
     <li class="slide">
@@ -101,6 +109,7 @@
                 <h4 class="title-item">Decoração de Ambiente</h4>
                 <div class="price"><span class="actual-price">R$ 119,99</span></div>
             </fieldset>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
         </form>
     </li>
     <li class="slide">
@@ -110,6 +119,7 @@
                 <h4 class="title-item">Decoração de Ambiente</h4>
                 <div class="price"><span class="actual-price">R$ 159,99</span></div>
             </fieldset>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
         </form>
     </li>
     <li class="slide">
@@ -119,6 +129,7 @@
                 <h4 class="title-item">Decoração de Ambiente</h4>
                 <div class="price"><span class="actual-price">R$ 129,90</span></div>
             </fieldset>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
         </form>
     </li>
     
@@ -140,6 +151,7 @@
                 <h4 class="title-item">Orquídeas Rosa em Espécie</h4>
                 <div class="price"><span class="actual-price">R$ 94,99</span></div>
             </fieldset>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
         </form>
     </li>
     <li class="slide">
@@ -149,6 +161,7 @@
                 <h4 class="title-item">Hibiscus Amarelo em Espécie</h4>
                 <div class="price"><span class="actual-price">R$ 29,99</span></div>
             </fieldset>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
         </form>
     </li>
     
@@ -159,6 +172,7 @@
         <h4 class="title-item">Passáro de Paraíso em Espécie</h4>
         <div class="price"><span class="actual-price">R$ 49,99</span></div>
             </fieldset>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
         </form>
     </li>
     <li class="slide">
@@ -168,6 +182,7 @@
             <h4 class="title-item">Astrómelias em Espécie</h4>
                 <div class="price"><span class="actual-price">R$ 45,99</span></div>
             </fieldset>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
         </form>
     </li>
     <li class="slide">
@@ -177,6 +192,7 @@
                 <h4 class="title-item">Batão do Imperador em Espécie</h4>
                 <div class="price"><span class="actual-price">R$ 34,99</span></div>
             </fieldset>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
         </form>
     </li>
     
@@ -214,5 +230,94 @@
     </ul>
 </div>
 
+<script>
+    var addToCartButtons = document.querySelectorAll('.add-to-cart');
+    var cartQuantityElement = document.querySelector('.cart-quantity');
+    var cartItemsElement = document.querySelector('.cart-items');
+    var cartButton = document.querySelector('.fa-shopping-cart');
+    var cartPopup = document.querySelector('.cart-popup');
+    var cartQuantity = 0;
+    var cartItems = [];
+  
+    addToCartButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        // Incrementa a quantidade do carrinho
+        cartQuantity++;
+        // Atualiza o valor exibido no carrinho
+        cartQuantityElement.textContent = cartQuantity;
+      });
+    });
+
+    addToCartButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+    
+    var item = {
+      name: button.parentNode.querySelector('.title-item').textContent,
+      price: button.parentNode.querySelector('.actual-price').textContent
+    };
+
+    // Adicione o item ao array de itens do carrinho
+    cartItems.push(item);
+
+    cartQuantityElement.textContent = cartQuantity;
+    updateCartItems();
+  });
+});
+
+function updateCartItems() {
+  
+  cartItemsElement.innerHTML = '';
+
+  // Adicione cada item ao carrinho
+  cartItems.forEach(function(item) {
+    var itemElement = document.createElement('div');
+    itemElement.classList.add('cart-item');
+
+    var nameElement = document.createElement('span');
+    nameElement.classList.add('item-name');
+    nameElement.textContent = item.name;
+    itemElement.appendChild(nameElement);
+
+    var priceElement = document.createElement('span');
+    priceElement.classList.add('item-price');
+    priceElement.textContent = item.price;
+    itemElement.appendChild(priceElement);
+
+    cartItemsElement.appendChild(itemElement);
+  });
+}
+
+function updateCartItems() {
+  cartItemsElement.innerHTML = '';
+
+  cartItems.forEach(function(item) {
+    var itemElement = document.createElement('div');
+    itemElement.classList.add('cart-item');
+
+    var nameElement = document.createElement('span');
+    nameElement.classList.add('item-name');
+    nameElement.textContent = item.name;
+    itemElement.appendChild(nameElement);
+
+    var priceElement = document.createElement('span');
+    priceElement.classList.add('item-price');
+    priceElement.textContent = item.price;
+    itemElement.appendChild(priceElement);
+
+    cartItemsElement.appendChild(itemElement);
+  });
+}
+
+cartButton.addEventListener('click', function() {
+  cartPopup.style.display = 'block';
+});
+
+window.addEventListener('click', function(event) {
+  if (event.target !== cartPopup && event.target !== cartButton) {
+    cartPopup.style.display = 'none';
+  }
+});
+</script>
+  
 </body>
 </html>
