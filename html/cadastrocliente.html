@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container">
-    <form>
+    <form id="cadastro-form">
         <h2>CADASTRO CLIENTE</h2>
         <label for="nome">Nome completo:</label>
         <input type="text" id="nome" name="nome" required>
@@ -91,5 +91,54 @@
     </div>
     </form>
 </div>
+
+<script>
+    document.getElementById('btn').addEventListener('click', function (event) {
+      event.preventDefault(); 
+      if (validateForm()) {
+        console.log('Formulário válido. Enviando...');
+      }
+    });
+
+    function validateForm() {
+      var nome = document.getElementById('nome').value;
+      var email = document.getElementById('email').value;
+      var senha = document.getElementById('senha').value;
+      var confirmaSenha = document.getElementById('confirma-senha').value;
+      var rua = document.getElementById('rua').value;
+      var numero = document.getElementById('numero').value;
+      var bairro = document.getElementById('bairro').value;
+      var cidade = document.getElementById('cidade').value;
+      var estado = document.getElementById('estado').value;
+      var cep = document.getElementById('cep').value;
+      var telefone = document.getElementById('telefone').value;
+      var dataNascimento = document.getElementById('data-nascimento').value;
+
+      if (nome === '' || email === '' || senha === '' || confirmaSenha === '' || rua === '' || numero === '' || bairro === '' || cidade === '' || estado === '' || cep === '' || telefone === '' || dataNascimento === '') {
+        alert('Por favor, preencha todos os campos.');
+        return false;
+      }
+
+      var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!email.match(emailRegex)) {
+        alert('Por favor, insira um endereço de e-mail válido.');
+    return false;
+    }
+
+    var senhaRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
+    if (!senha.match(senhaRegex)) {
+    alert('A senha deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, números e caracteres especiais.');
+    return false;
+    }
+
+    if (senha !== confirmaSenha) {
+    alert('As senhas não coincidem. Por favor, verifique.');
+    return false;
+    }
+    
+      return true; 
+    }
+</script>
+  
 </body>
 </html>

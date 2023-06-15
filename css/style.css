@@ -62,16 +62,17 @@ header {
     color: white;
 }
 
+/* Estilos para a quantidade de itens no carrinho */
 .cart-quantity {
     position: absolute;
-    background-color: rgb(1, 32, 2);
-    color: #fff;
+    color: black;
     border-radius: 50%;
     padding: 3px 6px;
     font-size: 12px;
 }
   
-.add-to-cart{
+/* Estilos para o botão de adicionar ao carrinho */
+.add-to-cart {
     position: absolute;
     margin-top: 5px;
     margin-left: 12px;
@@ -84,7 +85,8 @@ header {
     border-radius: 15px;
     cursor: pointer;
 }
-
+  
+/* Estilos para cada item no carrinho */
 .cart-item {
     display: flex;
     justify-content: space-between;
@@ -94,12 +96,15 @@ header {
   
 .item-name {
     font-weight: bold;
+    margin-right: 10px; /* Adicione esta linha para aumentar a margem à direita */
 }
   
 .item-price {
     color: #888;
+    margin-left: 10px; /* Adicione esta linha para aumentar a margem à esquerda */
 }
-
+  
+/* Estilos para o pop-up do carrinho */
 .cart-popup {
     position: fixed;
     top: 50%;
@@ -110,6 +115,7 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     display: none;
     z-index: 9999;
+    max-width: 980px;
 }
   
 .cart-popup h3 {
@@ -118,10 +124,26 @@ header {
 }
   
 .cart-items {
-    max-height: 200px;
+    max-height: 800px;
     overflow-y: auto;
 }
   
+/* Estilos para o botão de remover item */
+.remove-item {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+  
+.remove-item:hover {
+    background-color: #c0392b;
+}
+  
+   
 nav {
     background-color: rgb(0, 0, 0);
     border-top: 1px solid #e7e9e6;
