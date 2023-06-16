@@ -31,12 +31,13 @@
         <button id="checkout">Finalizar Compra</button>
       </div>
     </div>
+
   </div>
 </header>
-      
-    <nav>
-        <ul>
-            <li class="secao">
+
+<nav>
+    <ul>
+      <li class="secao">
                 <a class="categoria" href="#">Flores Tropicais por Espécie</a>
                 <div class="secao-content">
                     <a href="#">Orquídeas</a>
@@ -205,32 +206,26 @@
 </div>
 
 <div>
-    <div class="container">
-        <h3>Sobre a TropicFlowers</h3>
-        <p><strong>A FlowersTropic foi criada para os amantes de Flores Tropicais para as pessoas que gostam de presentear e, demonstrar carinho e afeto a quem se ama com flores. <br>Hoje trabalhamos com diversas flores Tropicais para todos os momentos especiais, como decorações em geral, arranjo de flores, buquê de flores e flores tropicais por espécie.</p></strong>
-    </div>  
+  <div class="container">
+    <h3>Sobre a TropicFlowers</h3>
+    <p><strong>A FlowersTropic foi criada para os amantes de Flores Tropicais para as pessoas que gostam de presentear e, demonstrar carinho e afeto a quem se ama com flores. <br>Hoje trabalhamos com diversas flores Tropicais para todos os momentos especiais, como decorações em geral, arranjo de flores, buquê de flores e flores tropicais por espécie.</strong></p>
+    <div id="chatbot-icon">
+      <img src="imagem/abelha-chatbot.jpg" alt="Ícone do chatbot">
+  </div>    
+  <iframe id="chatbot-frame" src="https://share.botstar.com/?id=sd0dab856-fb30-4667-a893-181ffe5778a4" frameborder="0" style="display: none;"></iframe>
+  </div>
 </div>
+
 
 <div>
     <footer>
-        <a>Nossa História</a>
-        <a>Nossa Equipe</a>
+    <a>Nossa História</a>
+    <a>Nossa Equipe</a>
     <a>Nossos Valores</a>
     <a>Formulário de Contato</a>
     <a>Endereço e Telefone</a>
     <a>Política de Trocas e Devoluções</a>
-</footer>
-</div>
-
-<div class="fab"  ontouchstart="">
-  <button class="main" >
-  </button>
-  <ul>
-    <li>
-      <label for="opcao1"></label>
-      <button id="opcao1">?</button>
-    </li>
-    </ul>
+    </footer>
 </div>
 
 <script>
@@ -244,20 +239,44 @@
     var cartQuantity = 0;
     var cartItems = [];
 
+    document.getElementById("chatbot-icon").addEventListener("click", function() {
+    document.getElementById("chatbot-icon").style.display = "none";
+    document.getElementById("chatbot-frame").style.display = "block";
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    var chatbotIcon = document.getElementById("chatbot-icon");
+    var chatbotFrame = document.getElementById("chatbot-frame");
+
+    var isOpen = false;
+
+    chatbotIcon.addEventListener("click", function(e) {
+        e.stopPropagation();
+        isOpen = !isOpen;
+        chatbotFrame.style.display = isOpen ? "block" : "none";
+        chatbotIcon.style.display = isOpen ? "none" : "block";
+    });
+
+    document.addEventListener("click", function(e) {
+        if (isOpen && e.target !== chatbotIcon && !chatbotFrame.contains(e.target)) {
+            isOpen = false;
+            chatbotFrame.style.display = "none";
+            chatbotIcon.style.display = "block";
+        }
+      });
+    });
+
     addToCartButtons.forEach(function (button) {
       button.addEventListener('click', function () {
-        // Incrementa a quantidade do carrinho
         cartQuantity++;
-        // Atualiza o valor exibido no carrinho
         cartQuantityElement.textContent = cartQuantity;
 
         var item = {
           name: button.parentNode.querySelector('.title-item').textContent,
           price: button.parentNode.querySelector('.actual-price').textContent,
-          quantity: 1 // Quantidade inicial
+          quantity: 1
         };
 
-        // Adicione o item ao array de itens do carrinho
         cartItems.push(item);
 
         updateCartItems();
@@ -267,7 +286,7 @@
     function updateCartItems() {
       cartItemsElement.innerHTML = '';
 
-      // Adicione cada item ao carrinho
+      
       cartItems.forEach(function (item, index) {
         var itemElement = document.createElement('li');
         itemElement.classList.add('cart-item');
