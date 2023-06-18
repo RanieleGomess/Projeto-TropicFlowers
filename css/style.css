@@ -239,7 +239,7 @@ nav.secao {
 
 button {
     background-color: white;
-    color: #26720f;
+    color: #0b2c01;
     font-weight: bold;
     text-decoration: none;
     border: none;
@@ -247,6 +247,18 @@ button {
     margin-right: 10px;
     border-radius: 15px;
     cursor: pointer;
+}
+
+.add-to-cart {
+    background-color: #66f03c;
+    color: black;
+}
+
+.slide-button {
+    margin-left: 40%;
+    margin-top: 10%;
+    background-color: #66f03c;
+    color: black;
 }
 
 .image {
@@ -290,14 +302,12 @@ h3 {
     grid-auto-columns: 1fr;
 }
 
-
 .slides-list img {
     height: 200px;
     background-color: white;
     margin-left: 0;
     margin-right: 0;
     cursor: pointer;
-    
 }
 
 form {
@@ -305,88 +315,16 @@ form {
     margin-left: 30px;
     margin-right: 40px;
     cursor: pointer;
-
 }
 
 fieldset {
     background: #ccc;
     border: 1px solid #ccc;
     height: 90px;
-    
 }
 
 h4 {
     margin-top: 10px;
-}
-
-#seta1 {
-    position: absolute;
-    padding: 15px;
-    box-shadow: 2px -2px 0 1px rgb(0, 0, 0) inset;
-    border: solid transparent;
-    border-width: 0 0 2px 2px;
-    transform: rotate(45deg);
-    margin-top: 150px;
-    cursor: pointer;
-}
-
-#seta2 {
-    position: absolute;
-    padding: 15px;
-    box-shadow: 2px -2px 0 1px rgb(0, 0, 0) inset;
-    border: solid transparent;
-    border-width: 0 0 2px 2px;
-    transform: rotate(-135deg);
-    margin-top: 150px;
-    cursor: pointer;
-    margin-left: 1300px;
-    
-}
-
-#seta3 {
-    position: absolute;
-    padding: 15px;
-    box-shadow: 2px -2px 0 1px rgb(0, 0, 0) inset;
-    border: solid transparent;
-    border-width: 0 0 2px 2px;
-    transform: rotate(45deg);
-    margin-top: 150px;
-    cursor: pointer;
-}
-
-#seta4 {
-    position: absolute;
-    padding: 15px;
-    box-shadow: 2px -2px 0 1px rgb(0, 0, 0) inset;
-    border: solid transparent;
-    border-width: 0 0 2px 2px;
-    transform: rotate(-135deg);
-    margin-top: 150px;
-    cursor: pointer;
-    margin-left: 1300px;
-}
-
-#seta5 {
-    position: absolute;
-    padding: 15px;
-    box-shadow: 2px -2px 0 1px rgb(0, 0, 0) inset;
-    border: solid transparent;
-    border-width: 0 0 2px 2px;
-    transform: rotate(45deg);
-    margin-top: 150px;
-    cursor: pointer;
-}
-
-#seta6 {
-    position: absolute;
-    padding: 15px;
-    box-shadow: 2px -2px 0 1px rgb(0, 0, 0) inset;
-    border: solid transparent;
-    border-width: 0 0 2px 2px;
-    transform: rotate(-135deg);
-    margin-top: 150px;
-    cursor: pointer;
-    margin-left: 1300px;
 }
 
 .container {

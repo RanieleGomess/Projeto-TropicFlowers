@@ -1,0 +1,449 @@
+@media (max-width: 768px) {
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  padding: 10px;
+  background-color: white;
+}
+
+header .logo {
+  margin-bottom: 10px;
+}
+
+header .navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+header .navigation a {
+  margin-bottom: 5px;
+  color: #333;
+  text-decoration: none;
+}
+
+header .menu-button {
+  display: block;
+  margin-top: 10px;
+  background-color: #ccc;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+header .account {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+header .account a {
+  margin-bottom: 5px;
+}
+
+header .cart-quantity {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: black;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 10px;
+}
+    
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a.active {
+  font-weight: bold;
+}
+
+nav .dropdown {
+  position: relative;
+}
+    
+nav .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+    
+nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.image-container {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.slides-list {
+  display: flex;
+  flex-direction: column; 
+}
+      
+.slide {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.slide form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+      
+.slide form fieldset {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.add-to-cart {
+  margin-top: 150px;
+}
+       
+.container {
+  background-image: url('../imagem/flor-tropical.jpg');
+  background-size: 100% auto;
+  background-position: center;
+  height: 300px;
+  position: relative;
+}
+
+.container h3 {
+  font-size: 12px;
+}
+
+.container p {
+  font-size: 10px;
+}
+        
+footer {
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 15%;
+}
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+header {
+  padding: 20px;
+}
+      
+header .logo {
+  margin-bottom: 20px;
+}
+      
+header .menu-button {
+  width: 40px;
+  height: 40px;
+}
+    
+nav {
+  padding: 10px;
+}
+    
+nav li {
+  margin: 0;
+}
+    
+nav .dropdown-content {
+  position: static;
+  display: block;
+  background-color: transparent;
+  padding: 0;
+}
+    
+.image-container {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: x-large;
+}
+    
+.slides-list {
+  display: flex;
+  flex-direction: column; 
+}
+  
+.slide {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.slide form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+  
+.slide form fieldset {
+  flex: 1;
+  margin-left: 10px;
+  border: none;
+}
+
+.title-item {
+  font-size: large;
+}
+
+.price {
+  font-size: large;
+}
+
+.add-to-cart {
+  margin-top: 150px;
+}
+
+.container {
+  background-image: url('../imagem/flor-tropical.jpg');
+  background-size: 100% auto;
+  background-position: center;
+  height: 50vh; 
+  position: relative;
+}
+    
+.container h3 {
+  font-size: 20px; 
+}
+    
+.container p {
+  font-size: 17px; 
+}
+     
+footer {
+  position: relative;
+  text-align: center;
+  font-size: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 15%;
+}
+
+}
+  
+@media (min-width: 1025px) {
+
+header {
+  padding: 40px;
+}
+    
+header .logo {
+  margin-bottom: 30px;
+}
+    
+header .menu-button {
+  width: 50px;
+  height: 50px;
+}
+
+nav {
+  padding: 10px;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav .dropdown-content {
+  position: static;
+  display: block;
+  background-color: transparent;
+  padding: 0;
+}
+
+.image-container {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: x-large;
+}
+
+.slides-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+  
+.slide {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.slide form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+  
+.slide form fieldset {
+  flex: 1;
+  margin-left: 10px;
+  border: none;
+}
+
+.title-item {
+  font-size: large;
+}
+
+.price {
+  font-size: large;
+}
+
+.add-to-cart {
+  margin-top: 150px;
+}
+
+.container {
+  background-image: url('../imagem/flor-tropical.jpg');
+  background-size: 100% auto;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+}
+      
+.container h3 {
+  font-size: 40px; 
+}
+      
+.container p {
+  font-size: 22px; 
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  font-size: 15px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 15%;
+}
+
+}
+
+@media (min-width: 1540px) {
+  
+.image-container {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.text {
+  flex: 1;
+}
+
+.text h2 {
+  font-size: xx-large;
+}
+
+.text p {
+  font-size: x-large;
+}
+
+.text button {
+  padding: 10px 20px;
+}
+  
+.container {
+  background-image: url('../imagem/flor-tropical.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 45vh; 
+  position: relative;
+}
+  
+.container h3 {
+  font-size: 45px;
+}
+  
+.container p {
+  font-size: 35px; 
+}
+
+}
+
+@media (min-height: 720px) {
+  
+.container {
+  background-image: url('../imagem/flor-tropical.jpg');
+  background-size: 100% auto;
+  background-position: center;
+  height: 40vh;
+  position: relative;
+}
+  
+.container h3 {
+  font-size: 40px; 
+}
+  
+.container p {
+  font-size: 22px; 
+}
+
+}
+
+@media (min-height: 2000px) {
+  
+.container {
+  background-image: url('../imagem/flor-tropical.jpg');
+  background-size: 100% auto;
+  background-position: center;
+  height: 20vh; 
+  position: relative;
+}
+  
+.container h3 {
+  font-size: 50px; 
+}
+  
+.container p {
+  font-size: 30px; 
+}
+
+}
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
